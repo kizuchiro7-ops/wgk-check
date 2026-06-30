@@ -25,33 +25,27 @@
 body { font-family: 'Noto Sans JP', sans-serif; background: var(--page-bg); color: var(--ink); font-size: 15px; line-height: 1.6; -webkit-text-size-adjust: 100%; }
 .page { max-width: 680px; margin: 0 auto; padding: 20px 16px 60px; }
 
-/* HEADER */
 .header { border-bottom: 3px solid var(--green-deep); padding-bottom: 16px; margin-bottom: 20px; }
 .school-name { font-family: 'Noto Serif JP', serif; font-size: 11px; color: var(--green-mid); letter-spacing: 0.1em; margin-bottom: 4px; }
 .form-title { font-family: 'Noto Serif JP', serif; font-size: 22px; font-weight: 700; color: var(--green-deep); line-height: 1.3; margin-bottom: 6px; }
 .form-subtitle { font-size: 12px; color: var(--ink-mid); line-height: 1.6; }
 
-/* 基本情報 */
 .info-label { font-size: 11px; color: var(--ink-mid); font-weight: 700; margin-bottom: 4px; display: block; }
 .info-input { width: 100%; border: 1.5px solid var(--line); border-radius: 6px; padding: 8px 10px; font-family: 'Noto Sans JP', sans-serif; font-size: 14px; color: var(--ink); background: var(--white); outline: none; transition: border-color 0.2s; }
 .info-input:focus { border-color: var(--green-mid); }
 select.info-input { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238FA99E' stroke-width='1.5' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 10px center; padding-right: 28px; }
 
-/* INSTRUCTION */
 .instruction { background: var(--amber-light); border-left: 4px solid var(--amber); border-radius: 0 8px 8px 0; padding: 12px 16px; font-size: 12px; color: var(--ink); margin-bottom: 22px; line-height: 1.7; }
 .instruction strong { color: var(--green-deep); font-size: 13px; }
 
-/* SECTION */
 .section { margin-bottom: 20px; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(45,106,79,0.07); }
 .section-header { display: flex; align-items: center; gap: 10px; background: var(--green-deep); color: var(--white); padding: 10px 16px; }
 .section-icon { font-size: 17px; line-height: 1; }
 .section-title { font-family: 'Noto Serif JP', serif; font-size: 14px; font-weight: 700; letter-spacing: 0.03em; }
 
-/* スケールヘッダー */
 .scale-header-row { display: flex; justify-content: flex-end; align-items: center; padding: 6px 16px 0; background: var(--white); gap: 6px; }
 .scale-header-label { width: 36px; text-align: center; font-size: 10px; color: var(--ink-light); font-weight: 700; flex-shrink: 0; }
 
-/* Q ROW */
 .q-row { display: grid; grid-template-columns: 24px 1fr auto; align-items: center; gap: 0 10px; padding: 10px 16px; border-bottom: 1px solid var(--green-pale); background: var(--white); transition: background 0.15s; }
 .q-row:last-child { border-bottom: none; }
 .q-row.alt { background: #FAFFFE; }
@@ -60,7 +54,6 @@ select.info-input { appearance: none; background-image: url("data:image/svg+xml,
 .q-text { font-size: 13px; color: var(--ink); line-height: 1.5; }
 .q-note { font-size: 10px; color: var(--ink-light); margin-top: 3px; line-height: 1.4; }
 
-/* スケールボタン */
 .scale-answer { display: flex; gap: 6px; align-items: center; flex-shrink: 0; }
 .scale-btn { width: 36px; height: 36px; border-radius: 50%; border: 2px solid var(--line); background: var(--white); display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: var(--ink-light); cursor: pointer; transition: all 0.18s; flex-shrink: 0; -webkit-tap-highlight-color: transparent; user-select: none; }
 .scale-btn:hover { border-color: var(--green-mid); color: var(--green-mid); transform: scale(1.08); }
@@ -72,7 +65,6 @@ select.info-input { appearance: none; background-image: url("data:image/svg+xml,
 .scale-btn[data-val="4"].selected { background: #40916C; border-color: #40916C; color: #fff; }
 .scale-btn[data-val="5"].selected { background: #2D6A4F; border-color: #2D6A4F; color: #fff; }
 
-/* 選択肢 */
 .choice-row { display: block; padding: 10px 16px; border-bottom: 1px solid var(--green-pale); background: var(--white); }
 .choice-row.alt { background: #FAFFFE; }
 .choice-row:last-child { border-bottom: none; }
@@ -83,40 +75,33 @@ select.info-input { appearance: none; background-image: url("data:image/svg+xml,
 .choice-btn:hover { border-color: var(--green-mid); color: var(--green-mid); }
 .choice-btn.selected { background: var(--green-deep); border-color: var(--green-deep); color: var(--white); box-shadow: 0 2px 6px rgba(45,106,79,0.3); }
 
-/* 自由記述 */
 .free-row { padding: 10px 16px; background: var(--white); border-bottom: 1px solid var(--green-pale); }
 .free-row:last-child { border-bottom: none; }
 .free-q-header { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; }
 .free-textarea { width: 100%; border: 1.5px solid var(--line); border-radius: 8px; padding: 10px 12px; font-family: 'Noto Sans JP', sans-serif; font-size: 13px; color: var(--ink); background: var(--white); resize: vertical; min-height: 72px; outline: none; transition: border-color 0.2s; line-height: 1.6; }
 .free-textarea:focus { border-color: var(--green-mid); }
 
-/* 進捗バー */
 .progress-wrap { position: sticky; top: 0; z-index: 100; background: var(--page-bg); padding: 8px 0 10px; margin-bottom: 16px; }
 .progress-bar-track { background: var(--line); border-radius: 4px; height: 6px; overflow: hidden; }
 .progress-bar-fill { background: linear-gradient(to right, #74C69D, #2D6A4F); height: 100%; border-radius: 4px; transition: width 0.3s ease; width: 0%; }
 .progress-label { text-align: right; font-size: 11px; color: var(--ink-light); margin-top: 4px; }
 
-/* 送信 */
 .submit-area { margin-top: 28px; text-align: center; }
 .submit-note { font-size: 11px; color: var(--ink-light); margin-bottom: 14px; line-height: 1.6; }
 .submit-btn { display: inline-block; background: var(--green-deep); color: var(--white); font-family: 'Noto Serif JP', serif; font-size: 16px; font-weight: 700; padding: 16px 48px; border-radius: 50px; border: none; cursor: pointer; letter-spacing: 0.06em; box-shadow: 0 4px 16px rgba(45,106,79,0.35); transition: all 0.2s; width: 100%; max-width: 320px; -webkit-tap-highlight-color: transparent; }
 .submit-btn:hover { background: var(--green-mid); transform: translateY(-2px); }
 .submit-btn:disabled { background: var(--ink-light); box-shadow: none; cursor: not-allowed; transform: none; }
 
-/* エラー */
 .q-row.error, .choice-row.error, .free-row.error { background: #FFF5F5 !important; border-left: 3px solid #E53E3E; }
 
-/* 完了画面 */
 .complete-screen { display: none; text-align: center; padding: 60px 20px; }
 .complete-screen.show { display: block; }
 .complete-icon { font-size: 64px; margin-bottom: 20px; }
 .complete-title { font-family: 'Noto Serif JP', serif; font-size: 22px; font-weight: 700; color: var(--green-deep); margin-bottom: 14px; }
 .complete-msg { font-size: 14px; color: var(--ink-mid); line-height: 1.8; }
 
-/* フッター */
 .footer { margin-top: 24px; border-top: 1px solid var(--line); padding-top: 12px; font-size: 10px; color: var(--ink-light); text-align: center; line-height: 1.7; }
 
-/* スマホ */
 @media (max-width: 480px) {
   .page { padding: 14px 12px 60px; }
   .form-title { font-size: 18px; }
@@ -133,7 +118,6 @@ select.info-input { appearance: none; background-image: url("data:image/svg+xml,
 
 <div class="page" id="formPage">
 
-  <!-- HEADER -->
   <div class="header">
     <div class="school-name">子どもの歩き方と発育の学校</div>
     <div class="form-title">お子さまの問診チェック表</div>
@@ -143,22 +127,18 @@ select.info-input { appearance: none; background-image: url("data:image/svg+xml,
     </div>
   </div>
 
-  <!-- 進捗バー -->
   <div class="progress-wrap">
     <div class="progress-bar-track"><div class="progress-bar-fill" id="progressFill"></div></div>
     <div class="progress-label" id="progressLabel">0 / 25 問回答済み</div>
   </div>
 
-  <!-- 基本情報 -->
   <div class="section">
     <div class="section-header"><span class="section-icon">📋</span><span class="section-title">基本情報</span></div>
     <div style="background:var(--white); padding:16px; border-radius:0 0 10px 10px; display:flex; flex-direction:column; gap:14px;">
-      <!-- ママのお名前（新設） -->
       <div>
         <span class="info-label">ママのお名前（フルネーム）<span style="color:#E53E3E;">*</span></span>
         <input type="text" class="info-input" id="mamaName" placeholder="例：山田 花子" />
       </div>
-      <!-- お子さまの名前 -->
       <div>
         <span class="info-label">お子さまのお名前（ニックネーム可）<span style="color:#E53E3E;">*</span></span>
         <input type="text" class="info-input" id="childName" placeholder="例：たろうくん" />
@@ -185,14 +165,12 @@ select.info-input { appearance: none; background-image: url("data:image/svg+xml,
     </div>
   </div>
 
-  <!-- INSTRUCTION -->
   <div class="instruction">
     <strong>【回答方法】</strong><br>
     各質問の右側にある丸いボタンをタップして選んでください。<br>
     <strong>① まったくない　② ほとんどない　③ ときどきある　④ よくある　⑤ いつも／ほぼ毎日</strong>
   </div>
 
-  <!-- A 運動・姿勢 -->
   <div class="section">
     <div class="section-header"><span class="section-icon">🏃</span><span class="section-title">A　運動・姿勢</span></div>
     <div class="scale-header-row"><span class="scale-header-label">①</span><span class="scale-header-label">②</span><span class="scale-header-label">③</span><span class="scale-header-label">④</span><span class="scale-header-label">⑤</span></div>
@@ -202,7 +180,6 @@ select.info-input { appearance: none; background-image: url("data:image/svg+xml,
     <div class="q-row alt" id="row-q4"><div class="q-num">4</div><div class="q-text">外遊び・体を動かすことを嫌がる・すぐ疲れる<div class="q-note">「疲れた」「抱っこして」が多い、走り回るより座っていたがるなど</div></div><div class="scale-answer" data-qid="q4"></div></div>
   </div>
 
-  <!-- B 集中・学習・感覚 -->
   <div class="section">
     <div class="section-header"><span class="section-icon">🧠</span><span class="section-title">B　集中・学習・感覚</span></div>
     <div class="scale-header-row"><span class="scale-header-label">①</span><span class="scale-header-label">②</span><span class="scale-header-label">③</span><span class="scale-header-label">④</span><span class="scale-header-label">⑤</span></div>
@@ -212,7 +189,6 @@ select.info-input { appearance: none; background-image: url("data:image/svg+xml,
     <div class="q-row alt" id="row-q8"><div class="q-num">8</div><div class="q-text">言葉の発音・発話・読み書きが気になる<div class="q-note">滑舌が悪い、言葉が出にくい、読むのが遅い・苦手など</div></div><div class="scale-answer" data-qid="q8"></div></div>
   </div>
 
-  <!-- C 感情・行動 -->
   <div class="section">
     <div class="section-header"><span class="section-icon">💬</span><span class="section-title">C　感情・行動</span></div>
     <div class="scale-header-row"><span class="scale-header-label">①</span><span class="scale-header-label">②</span><span class="scale-header-label">③</span><span class="scale-header-label">④</span><span class="scale-header-label">⑤</span></div>
@@ -220,7 +196,6 @@ select.info-input { appearance: none; background-image: url("data:image/svg+xml,
     <div class="q-row alt" id="row-q10"><div class="q-num">10</div><div class="q-text">慎重すぎる・怖がり・新しいことを強く嫌がる<div class="q-note">初めての場所・人・食べ物を激しく拒否、ブランコや滑り台を怖がるなど</div></div><div class="scale-answer" data-qid="q10"></div></div>
   </div>
 
-  <!-- D 食事・口腔 -->
   <div class="section">
     <div class="section-header"><span class="section-icon">🍽️</span><span class="section-title">D　食事・口腔</span></div>
     <div class="scale-header-row"><span class="scale-header-label">①</span><span class="scale-header-label">②</span><span class="scale-header-label">③</span><span class="scale-header-label">④</span><span class="scale-header-label">⑤</span></div>
@@ -228,7 +203,6 @@ select.info-input { appearance: none; background-image: url("data:image/svg+xml,
     <div class="q-row alt" id="row-q12"><div class="q-num">12</div><div class="q-text">口が開きやすい・口呼吸・いびき<div class="q-note">ぽかん口、食事中に口で息をする、寝ているときいびきをかくなど</div></div><div class="scale-answer" data-qid="q12"></div></div>
   </div>
 
-  <!-- E 睡眠 -->
   <div class="section">
     <div class="section-header"><span class="section-icon">🌙</span><span class="section-title">E　睡眠</span></div>
     <div class="scale-header-row"><span class="scale-header-label">①</span><span class="scale-header-label">②</span><span class="scale-header-label">③</span><span class="scale-header-label">④</span><span class="scale-header-label">⑤</span></div>
@@ -244,7 +218,6 @@ select.info-input { appearance: none; background-image: url("data:image/svg+xml,
     </div>
   </div>
 
-  <!-- F スクリーン・外遊び -->
   <div class="section">
     <div class="section-header"><span class="section-icon">📱</span><span class="section-title">F　スクリーンタイム・外遊び</span></div>
     <div class="choice-row" id="row-q15">
@@ -272,7 +245,6 @@ select.info-input { appearance: none; background-image: url("data:image/svg+xml,
     </div>
   </div>
 
-  <!-- G 気になる行動 -->
   <div class="section">
     <div class="section-header"><span class="section-icon">🔍</span><span class="section-title">G　気になる行動</span></div>
     <div style="background:var(--amber-light); padding:8px 16px; font-size:11px; color:var(--ink-mid); border-bottom:1px solid var(--line);">「こんなこと、うちの子だけ？」と思っていたこともぜひチェックしてみてください</div>
@@ -288,11 +260,21 @@ select.info-input { appearance: none; background-image: url("data:image/svg+xml,
         <button class="choice-btn" data-val="ほぼ毎日">ほぼ毎日</button>
       </div>
     </div>
-    <div class="scale-header-row"><span class="scale-header-label">①</span><span class="scale-header-label">②</span><span class="scale-header-label">③</span><span class="scale-header-label">④</span><span class="scale-header-label">⑤</span></div>
-    <div class="q-row" id="row-q20"><div class="q-num">20</div><div class="q-text">内股歩き・つま先歩き・足音を立てて歩く<div class="q-note">歩くとき足が内側に向く、かかとをつかずつま先だけで歩く、ドスドス大きな音を立てるなど</div></div><div class="scale-answer" data-qid="q20"></div></div>
+    <!-- Q20: 歩き方 → 複数選択に変更 -->
+    <div class="choice-row alt" id="row-q20">
+      <div class="choice-q-header"><div class="q-num">20</div><div class="q-text">お子さまの歩き方について当てはまるものは？<div class="q-note">複数選択できます</div></div></div>
+      <div class="choice-options choice-multi" data-qid="q20">
+        <button class="choice-btn" data-val="内股歩き">内股歩き</button>
+        <button class="choice-btn" data-val="つま先歩き">つま先歩き</button>
+        <button class="choice-btn" data-val="バタバタ歩き（足音が大きい）">バタバタ歩き（足音が大きい）</button>
+        <button class="choice-btn" data-val="ヘナヘナ歩き（ふにゃふにゃした歩き）">ヘナヘナ歩き（ふにゃふにゃした歩き）</button>
+        <button class="choice-btn" data-val="ゴリラ歩き（腕を前に垂らして歩く）">ゴリラ歩き（腕を前に垂らして歩く）</button>
+        <button class="choice-btn" data-val="ロボット歩き（腕を振らない）">ロボット歩き（腕を振らない）</button>
+        <button class="choice-btn" data-val="普通歩き">普通歩き</button>
+      </div>
+    </div>
   </div>
 
-  <!-- H 発達歴・出産歴 -->
   <div class="section">
     <div class="section-header"><span class="section-icon">👶</span><span class="section-title">H　発達歴・出産について</span></div>
     <div style="background:var(--green-pale); padding:8px 16px; font-size:11px; color:var(--ink-mid); border-bottom:1px solid var(--line);">当てはまるものをすべて選んでください（複数選択OK）</div>
@@ -321,7 +303,6 @@ select.info-input { appearance: none; background-image: url("data:image/svg+xml,
     </div>
   </div>
 
-  <!-- 自由記述 -->
   <div class="section">
     <div class="section-header"><span class="section-icon">✏️</span><span class="section-title">今一番気になっていること</span></div>
     <div class="free-row" id="row-q23">
@@ -330,7 +311,6 @@ select.info-input { appearance: none; background-image: url("data:image/svg+xml,
     </div>
   </div>
 
-  <!-- 送信 -->
   <div class="submit-area">
     <div class="submit-note" id="submitNote">全ての質問にお答えいただくと送信できます</div>
     <button class="submit-btn" id="submitBtn" onclick="submitForm()">回答を送信する　→</button>
@@ -338,7 +318,6 @@ select.info-input { appearance: none; background-image: url("data:image/svg+xml,
   <div class="footer">子どもの歩き方と発育の学校<br>ご記入いただいた内容は個別相談のみに使用します</div>
 </div>
 
-<!-- 完了画面 -->
 <div class="complete-screen" id="completePage">
   <div class="complete-icon">🌿</div>
   <div class="complete-title">ご回答ありがとうございました！</div>
@@ -353,13 +332,12 @@ select.info-input { appearance: none; background-image: url("data:image/svg+xml,
 const GAS_URL = "https://script.google.com/macros/s/AKfycbxMXbTlMaQjOTiEXFhaqDjFlFL30FlYxtB2KZvTpCUghpl859KWyy218XadEw8oVJtOnw/exec";
 
 const answers = {};
-const scaleQids  = ["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","q11","q12","q13","q16","q18","q20"];
+const scaleQids  = ["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","q11","q12","q13","q16","q18"];
 const choiceQids = ["q14","q15","q17","q19"];
-const multiQids  = ["q21","q22"];
+const multiQids  = ["q20","q21","q22"];
 const requiredQids = [...scaleQids, ...choiceQids, ...multiQids];
-const TOTAL_Q = requiredQids.length + 3; // +3 = ママ名前・子ども名前・年齢
+const TOTAL_Q = requiredQids.length + 3;
 
-// 5段階ボタン生成
 document.querySelectorAll('.scale-answer').forEach(container => {
   const qid = container.dataset.qid;
   for (let i = 1; i <= 5; i++) {
@@ -373,7 +351,6 @@ document.querySelectorAll('.scale-answer').forEach(container => {
   }
 });
 
-// 単一選択
 document.querySelectorAll('.choice-options:not(.choice-multi)').forEach(container => {
   const qid = container.dataset.qid;
   container.querySelectorAll('.choice-btn').forEach(btn => {
@@ -381,7 +358,6 @@ document.querySelectorAll('.choice-options:not(.choice-multi)').forEach(containe
   });
 });
 
-// 複数選択
 document.querySelectorAll('.choice-options.choice-multi').forEach(container => {
   const qid = container.dataset.qid;
   if (!answers[qid]) answers[qid] = [];
@@ -490,7 +466,8 @@ async function submitForm() {
     q5: answers.q5,   q6: answers.q6,   q7: answers.q7,   q8: answers.q8,
     q9: answers.q9,   q10: answers.q10, q11: answers.q11, q12: answers.q12,
     q13: answers.q13, q14: answers.q14, q15: answers.q15, q16: answers.q16,
-    q17: answers.q17, q18: answers.q18, q19: answers.q19, q20: answers.q20,
+    q17: answers.q17, q18: answers.q18, q19: answers.q19,
+    q20: Array.isArray(answers.q20) ? answers.q20.join('、') : '',
     q21: Array.isArray(answers.q21) ? answers.q21.join('、') : '',
     q22: Array.isArray(answers.q22) ? answers.q22.join('、') : '',
     q23: document.getElementById('q23').value.trim()
